@@ -66,6 +66,31 @@ def idGua(guaCode):
 		yiGua[1].append(9)	#Active
 		xinGua[1].append(9)	#Yang
 
+	def baGuaID(gua):
+		if gua == [6,6,6]:
+		    gua.append(8)
+		elif gua == [6,6,9]:
+		    gua.append(1)
+		elif gua == [6,9,9]:
+		    gua.append(2)
+		elif gua == [9,6,9]:
+		    gua.append(3)
+		elif gua == [9,9,9]:
+		    gua.append(4)
+		elif gua == [9,9,6]:
+		    gua.append(5)
+		elif gua == [6,9,6]:
+		    gua.append(6)
+		else: #gua == [9,6,6]:
+		    gua.append(7)
+
+	baGuaID(jiuGua[0])
+	baGuaID(jiuGua[1])
+	baGuaID(yiGua[0])
+	baGuaID(yiGua[1])
+	baGuaID(xinGua[0])
+	baGuaID(xinGua[1])
+
 	print jiuGua
 	print yiGua
 	print xinGua
