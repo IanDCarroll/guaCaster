@@ -38,6 +38,7 @@ def whtnize(di):
     else: 
 	di['whtn'] = ''
 
+#Print function not used when wtnDice not used as main. 
 def rollOut(di):
     return "%s d%s: %s Total: %s%s" % (di['nmbr'], di['sids'],
 	di['rols'], di['totl'], di['whtn'])
@@ -50,14 +51,6 @@ def roll(dNum,dSid,di,rolDB):
     physics(di)
     rolDBize(di, rolDB)
     whtnize(di)
-    return rollOut(di)
-
-#todo: turn this into a universal getter method that gets di['totl']
-def rollTotl(dNum,dSid,di): 
-    di['nmbr'] = dNum
-    di['sids'] = dSid
-
-    physics(di)
     return di['totl']
 
 
@@ -76,7 +69,7 @@ def rollHigher(dNum,dSid,di,rolDB):
     di['nmbr'] = 'H'
     rolDBize(di, rolDB)
 
-    return rollOut(di)
+    return di['totl']
 
 def rollLower(dNum,dSid,di,rolDB):
     di['nmbr'] = dNum
@@ -91,7 +84,7 @@ def rollLower(dNum,dSid,di,rolDB):
     di['nmbr'] = 'L'
     rolDBize(di, rolDB)
 
-    return rollOut(di)
+    return di['totl']
 
 def rollDigit(dNum,dSid,di,rolDB):
     di['nmbr'] = dNum
@@ -116,7 +109,7 @@ def rollDigit(dNum,dSid,di,rolDB):
     whtnize(di)
     di['nmbr'] = 'D'
 
-    return rollOut(di)
+    return di['totl']
 
 #def rollExtra():
 
