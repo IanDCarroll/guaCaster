@@ -60,7 +60,7 @@ def nameGua(gua):
 	elif gua == 699999:
 		return '43'
 	elif gua == 999999:
-		return '1'
+		return '1: Qian: The Creative'
 	elif gua == 996999:
 		return '9'
 	elif gua == 696999:
@@ -140,4 +140,4 @@ def nameGua(gua):
 	elif gua == 669666:
 		return '23'
 	else: #gua == 666666:
-		return '2'
+		return '2: Kun: The Receptive'
